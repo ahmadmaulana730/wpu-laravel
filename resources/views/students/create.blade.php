@@ -11,21 +11,45 @@
                 <div class="row mb-3">
                     <div class="col">
                         <label for="nama">nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
+                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" placeholder="Masukan Nama" value="{{old('nama')}}">
+                        @error('nama')
+
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="col">
                         <label for="nrp">NRP</label>
-                        <input type="text" class="form-control" id="nrp" name="nrp" placeholder="NRP">
+                        <input type="text" class="form-control @error('nrp') is-invalid @enderror" id="nrp" name="nrp" placeholder="NRP" value="{{old('nrp')}}">
+                        @error('nrp')
+
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="jurusan">jurusan</label>
-                        <input type="text" class="form-control" id="jurusan" name="jurusan" placeholder="jurusan">
+                        <input type="text" class="form-control  @error('jurusan') is-invalid @enderror" id="jurusan" name="jurusan" placeholder="jurusan" value="{{old('jurusan')}}">
+                        @error('jurusan')
+
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="col">
                         <label for="email">email</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="email">
+                        <input type="text" class="form-control  @error('email') is-invalid @enderror" id="email" name="email" placeholder="email" value="{{old('emai')}}">
+                        @error('email')
+
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                 </div>
 
